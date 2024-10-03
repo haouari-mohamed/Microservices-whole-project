@@ -1,0 +1,48 @@
+table{
+    box-shadow: none;
+    background: transparent;
+}
+th{
+    color:  #81175e !important;
+    font-weight: 800;
+
+}
+
+#th{
+    color: #ff914d !important;
+    background: #222 !important;
+}
+#td{
+    color: white !important;
+}
+#td > a{
+    color: white !important;
+    text-decoration: none;
+}
+#td > a:hover{
+    color: white !important;
+    text-decoration: underline;
+}
+.delete{
+    background: #222;
+    border-radius: 7px;
+    border: 1px solid transparent;
+    transition: .4s;
+}
+.delete:hover{
+    border: 1px solid red;
+}
+.page-link{
+    background:#ff914d !important ;
+    border: 2px solid black !important;
+    color: white !important;
+    padding: 5px 10px !important;
+    font-size: 15px !important;
+}
+.page{
+    background:#000 !important ;
+    border: 2px solid #ffffff !important;
+    color: white !important;
+    border-left: none !important;
+    border-right: none !important;
+}

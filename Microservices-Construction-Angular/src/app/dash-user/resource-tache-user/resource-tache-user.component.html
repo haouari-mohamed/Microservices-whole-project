@@ -1,0 +1,19 @@
+
+<div class="show-resource">
+    <h2>Resources</h2>
+<div class="resources-container">
+    <div class="resource-card" *ngFor="let ressource of Ressourcelist">
+      <mat-card class="mat-elevation-z4">
+        <mat-card-header>
+          <mat-card-title>{{ ressource.name }}</mat-card-title>
+        </mat-card-header>
+        <img mat-card-image [src]="ressource.picture" alt="Photo of {{ ressource.name }}">
+        <mat-card-content id="card-content">
+          <h5>Quantity: {{ ressource.quantity }}</h5>
+          <p><span>Fournisseur : </span>{{ ressource.infoFornisseur }}</p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</div>
+  

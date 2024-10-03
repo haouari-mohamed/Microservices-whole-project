@@ -1,0 +1,33 @@
+<form [formGroup]="RegistreForm" (ngSubmit)="RegistreMethod()">
+
+    <div class="group">
+  
+        <h1>Creer Compte</h1>
+  
+        <div class="group-login">
+            <input type="text"placeholder="Entrer votre nom..." formControlName="username" id="username">
+        </div>
+  
+        <div class="group-login">
+            <input type="password" placeholder="Entrer votre mot de passe..." formControlName="password" id="password">
+        </div>
+  
+        <div class="group-login">
+            <input type="text" placeholder="Entrer votre Email..." formControlName="email" id="email">
+        </div>
+  
+        <div class="group-login">
+            <input type="number" placeholder="Entrer votre Age..." formControlName="age" id="age">
+        </div>
+        <div class="group-login">
+            <select formControlName="role" id="role">
+                <option value="CUSTOMER">Utilisateur</option>
+            </select>
+        </div>
+  
+        <div class="group-login">
+            <button type="submit">Creer</button>
+        </div>
+    </div>
+  
+  </form>

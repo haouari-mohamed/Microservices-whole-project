@@ -1,0 +1,79 @@
+<div class="hero">
+    <div class="hero-warpper">
+      <table id="mat-table" mat-table [dataSource]="dataSource" matSort (matSortChange)="onSortChange($event)" class="mat-elevation-z8">
+
+      
+       
+        <ng-container matColumnDef="Description">
+          <th mat-header-cell id="th" *matHeaderCellDef mat-sort-header> Description </th>
+          <td mat-cell id="td" *matCellDef="let element"> {{element.description}} </td>
+        </ng-container>
+      
+        
+        <ng-container matColumnDef="Date Creation">
+          <th mat-header-cell id="th" *matHeaderCellDef mat-sort-header> Date Creation </th>
+          <td mat-cell id="td" *matCellDef="let element"> {{element.dateCreation}} </td>
+        </ng-container>
+
+           
+        <ng-container matColumnDef="Date Fin">
+            <th mat-header-cell id="th" *matHeaderCellDef mat-sort-header="dateFin"> Date Fin </th>
+            <td mat-cell id="td" *matCellDef="let element"> {{element.dateFin}} </td>
+          </ng-container>
+
+          <ng-container matColumnDef="Status">
+            <th mat-header-cell id="th" *matHeaderCellDef mat-sort-header> Status </th>
+            <td mat-cell id="td" *matCellDef="let element"> {{element.status}} </td>
+          </ng-container>
+
+          <ng-container matColumnDef="Delete">
+            <th mat-header-cell id="th" *matHeaderCellDef>Remove</th>
+            <td mat-cell id="td" *matCellDef="let element">
+              <button mat-button class="delete"  color="warn"  id="remove" (click)="deleteTache(element.id)">
+                Delete
+              </button>
+            </td>
+          </ng-container>
+  
+          <ng-container matColumnDef="Update">
+            <th mat-header-cell id="th" *matHeaderCellDef>Update</th>
+            <td mat-cell id="td" class="update" *matCellDef="let element">
+              <a [routerLink]="['update', element.id]" mat-button color="primary" id="update" >
+                Update
+              </a>
+            </td>
+          </ng-container>
+
+          <ng-container matColumnDef="Resources">
+            <th mat-header-cell id="th" *matHeaderCellDef>Resources</th>
+            <td mat-cell id="td" class="resource" *matCellDef="let element">
+              <a [routerLink]="['/dashboard/resource', element.id]" mat-button color="primary" id="resources" >
+                Ressources
+              </a>
+            </td>
+          </ng-container>
+      
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+    </div>
+  </div>
+  <nav>
+    <ul class="pagination justify-content-center">
+      <li class="page-item" [class.disabled]="currentPage === 1">
+        <button class="page-link" (click)="onPageChange(currentPage - 1)" aria-label="Previous">
+          <span aria-hidden="true">&laquo;</span>
+        </button>
+      </li>
+  
+      <li *ngFor="let page of getPagesArray()" class="page-item" [class.active]="page === currentPage">
+        <button class="page-link page" (click)="onPageChange(page)">{{ page }}</button>
+      </li>
+  
+      <li class="page-item" [class.disabled]="currentPage === totalPages">
+        <button class="page-link" (click)="onPageChange(currentPage + 1)" aria-label="Next">
+          <span aria-hidden="true">&raquo;</span>
+        </button>
+      </li>
+    </ul>
+  </nav>

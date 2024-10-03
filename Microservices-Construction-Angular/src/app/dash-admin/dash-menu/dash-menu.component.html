@@ -1,0 +1,35 @@
+<div class="menu">
+
+    <div class="logo">
+        <img src="../../../assets/images/Logo.png" alt="">
+    </div>
+
+    <ul>
+        <li>
+          <a 
+            routerLink="/dashboard/projet" 
+            [ngClass]="{'active': isActive('/dashboard/projet')}" 
+          >
+            <i class="pi pi-home"></i> Acceuil
+          </a>
+        </li>
+        <li>
+          <a 
+            routerLink="/dashboard/resources" 
+            [ngClass]="{'active': isActive('/dashboard/resources')}"
+          >
+            <i class="pi pi-hammer"></i> Resources
+          </a>
+        </li>
+      </ul>
+      <br>
+      <ul>
+        <li>
+          <button (click)="logout(true)" id="logout">
+            <i class="pi pi-sign-out"></i> Logout
+          </button>
+        </li>
+      </ul>
+      
+
+</div>

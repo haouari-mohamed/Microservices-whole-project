@@ -1,0 +1,211 @@
+:root {
+  --primary-orange: #ff6b35;
+  --secondary-orange: #ff9f1c;
+  --primary-white: #ffffff;
+  --secondary-white: #f5f5f5;
+  --accent-dark: #2d3142;
+  --accent-light: #4f5d75;
+  --primary-black: #000000;
+}
+
+body {
+  background-color: var(--primary-white);
+  color: var(--primary-white);
+  font-family: 'Roboto', sans-serif;
+}
+
+
+.filter-section {
+  background-color: black;
+  color: var(--primary-white);
+  padding: 20px;
+  border-radius: 15px ;
+  border-color: 2px solid rgb(235, 235, 235);
+  border: 2px solid white;
+  margin-bottom: 30px;
+  box-shadow: 0 6px 12px rgba(234, 229, 229, 0.3);
+  border: 2px solid white;
+  transition: all 0.3s ease;
+}
+
+.filter-section label {
+  color: var(--primary-white);
+  margin-right: 10px;
+  font-weight: bold;
+  color: white;
+  padding: 10px;
+ 
+}
+
+.filter-section input {
+  background-color: var(--primary-black);
+  border: 0,5px solid white;
+  color: var(--primary-orange);
+  padding: 10px 15px;
+  border-radius: 8px;
+  margin-right: 15px;
+  transition: all 0.3s ease;
+ 
+}
+
+.filter-section input:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255, 159, 28, 0.3);
+  transform: scale(1.05);
+}
+
+.filter-section button {
+  background-color: white;
+  color: black;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.filter-section button:hover {
+  background-color: rgba(255, 166, 0, 0.689);
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 5px 15px rgba(255, 107, 53, 0.4);
+}
+
+/* Table Styles */
+.mat-elevation-z8 {
+  background-color: rgb(2, 2, 2);
+ 
+  
+  box-shadow: 0 8px 16px rgba(240, 238, 238, 0.3);
+  transition: all 0.3s ease;
+  border-radius: 15px ;
+  border-color: 2px solid rgb(235, 235, 235);
+  border: 2px solid white;
+ 
+}
+
+.mat-header-row {
+  background-color: var(--primary-black);
+  border-bottom: 2px solid white;
+ 
+}
+th,td{
+  border: 1px solid;
+
+}
+
+.mat-header-cell {
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 20px 15px;
+  border-color: white;
+}
+
+.mat-row {
+  background-color: var(--primary-black);
+  transition: all 0.3s ease;
+  border-radius: 8px;
+}
+
+.mat-row:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 6px 12px rgba(255, 107, 53, 0.15);
+  background-color: var(--primary-black);
+}
+
+.mat-cell {
+  color: var(--primary-white);
+  padding: 15px;
+  border-top: 1px solid var(--primary-white);
+  border-bottom: 1px solid var(--primary-white);
+}
+
+/* Pagination Styles */
+.pagination {
+  margin-top: 30px;
+}
+
+.page-item .page-link {
+  background-color: var(--primary-black);
+  color: var(--primary-white);
+  border: 2px solid var(--primary-white);
+  margin: 0 5px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.page-item .page-link:hover {
+  background-color: var(--primary-orange);
+  color: var(--primary-white);
+  transform: scale(1.1);
+}
+
+.page-item.active .page-link {
+  background-color: var(--primary-orange);
+  color: var(--primary-white);
+  border-color: var(--primary-orange);
+}
+
+.page-item.disabled .page-link {
+  background-color: var(--secondary-white);
+  color: var(--accent-light);
+  border-color: var(--accent-light);
+  opacity: 0.5;
+}
+
+.mat-mdc-table tbody, .mat-mdc-table tfoot, .mat-mdc-table thead, .mat-mdc-cell, .mat-mdc-footer-cell, .mat-mdc-header-row, .mat-mdc-row, .mat-mdc-footer-row, .mat-mdc-table .mat-mdc-header-cell {
+  background: inherit;
+  color: white;
+}
+
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.mat-row {
+  animation: fadeInUp 0.5s ease-out forwards;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.filter-section button:hover {
+  animation: pulse 1s infinite;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .filter-section {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .filter-section input,
+  .filter-section button {
+    margin-bottom: 15px;
+    width: 100%;
+  }
+
+  .mat-table {
+    font-size: 14px;
+  }
+
+  .mat-header-cell,
+  .mat-cell {
+    padding: 10px;
+  }
+}

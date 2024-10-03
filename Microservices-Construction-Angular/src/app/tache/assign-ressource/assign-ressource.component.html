@@ -1,0 +1,14 @@
+<form [formGroup]="RessourceForm" (ngSubmit)="Assign()">
+    <div class="group">
+      <label for="ressource">Assign Ressource:</label>
+      <select formControlName="idRessource" id="ressource">
+        <option>Select : </option>
+        <option *ngFor="let ressource of listRessource" [value]="ressource.id">
+          {{ ressource.name }}
+        </option>
+      </select>
+    </div>
+  
+    <button type="submit">Assign</button>
+</form>
+  

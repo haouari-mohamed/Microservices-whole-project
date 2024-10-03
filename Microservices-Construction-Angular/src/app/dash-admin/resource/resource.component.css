@@ -1,0 +1,18 @@
+.resource{
+    width: 100%;
+}
+.add-resource{
+    width: 100%;
+    background: #000;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.show-resource{
+    width: 100%;
+    background: #000;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+}

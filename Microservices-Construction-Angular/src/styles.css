@@ -1,0 +1,25 @@
+/* You can add global styles to this file, and also import other style files */
+@import "primeicons/primeicons.css";
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+::-webkit-scrollbar {
+    width: 3px;
+    height:3px;
+  }
+
+::-webkit-scrollbar-track {
+    background: #333333; 
+  }
+
+::-webkit-scrollbar-thumb {
+   background: #ffe9eb; 
+  }
+
+::-webkit-scrollbar-thumb:hover {
+    background: black; 
+  }

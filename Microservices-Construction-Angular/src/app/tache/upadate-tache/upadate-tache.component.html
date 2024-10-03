@@ -1,0 +1,21 @@
+<h2>Modifier Tache</h2>
+<form [formGroup]="TacheForm" (ngSubmit)="UpdateTache()">
+ 
+    <div class="group">
+        <input type="text"placeholder="Entrer description du tache..." formControlName="description" id="description">
+    </div>
+
+    <div class="group">
+        <input type="date" formControlName="dateFin" id="dateFin">
+    </div>
+
+    <div class="group">
+    <select formControlName="status" id="status">
+        <option disabled>Status</option>
+      <option *ngFor="let status of statusOptions" [value]="status">{{ status }}</option>
+    </select>
+  </div>
+   
+    <button type="submit">Update</button>
+
+</form>

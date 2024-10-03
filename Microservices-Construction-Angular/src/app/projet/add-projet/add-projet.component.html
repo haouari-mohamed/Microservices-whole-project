@@ -1,0 +1,16 @@
+<h2>Ajouter projet</h2>
+<form [formGroup]="ProjetForm" (ngSubmit)="submitProjet()">
+    <div class="group">
+        <input type="text"placeholder="Entrer nom du projet..." formControlName="name" id="name">
+    </div>
+    <div class="group">
+        <input type="text"placeholder="Entrer description du projet..." formControlName="description" id="description">
+    </div>
+    <div class="group">
+        <input type="number"placeholder="Entrer budget..." formControlName="budget" id="budget">
+    </div>
+    <div class="group">
+        <input type="date" formControlName="dateFin" id="dateFin">
+    </div>
+    <button type="submit">Creer</button>
+</form>

@@ -1,0 +1,113 @@
+<!-- <form [formGroup]="loginForm" (ngSubmit)="loginMethod()">
+    <div class="logo">
+    </div>
+  
+    <div class="group">
+  
+        <h1>Connecter</h1>
+  
+        <div class="group-login">
+            <input type="text"placeholder="Entrer votre nom..." formControlName="username" id="username">
+        </div>
+  
+        <div class="group-login">
+            <input type="password" placeholder="Entrer votre mot de passe..." formControlName="password" id="password">
+        </div>
+  
+        <div class="group-login">
+            <a href="#">Mot de passe oublié?</a><br>
+            <button type="submit">Connecter</button>
+  
+            <h2>Vous n’avez pas de compte ? <a [routerLink]="['/registre']">Creer Compte</a></h2>
+        </div>
+    </div>
+  
+  </form> -->
+
+
+  <!-- <form [formGroup]="RegistreForm" (ngSubmit)="RegistreMethod()"></form>
+
+    <div class="group">
+  
+        <h1>Creer Compte</h1>
+  
+        <div class="group-login">
+            <input type="text"placeholder="Entrer votre nom..." formControlName="username" id="username">
+        </div>
+  
+        <div class="group-login">
+            <input type="password" placeholder="Entrer votre mot de passe..." formControlName="password" id="password">
+        </div>
+  
+        <div class="group-login">
+            <input type="text" placeholder="Entrer votre Email..." formControlName="email" id="email">
+        </div>
+  
+        <div class="group-login">
+            <input type="number" placeholder="Entrer votre Age..." formControlName="age" id="age">
+        </div>
+        <div class="group-login">
+            <select formControlName="role" id="role">
+                <option value="CUSTOMER">Utilisateur</option>
+            </select>
+        </div>
+  
+        <div class="group-login">
+            <button type="submit">Creer</button>
+        </div>
+    </div>
+   -->
+  <!-- </form> -->
+
+
+<div class="main">
+    <div class="main-wrapper">
+        <div class="container">
+            <div class="welcome">
+              <!-- Boîte rose qui se déplace -->
+              <div class="pinkbox" [ngStyle]="{'transform': transformStyle}">
+                <!-- Formulaire d'inscription -->
+                <div class="signup" [ngClass]="{'nodisplay': !showSignup}">
+                  <h1>Register</h1>
+                  <form [formGroup]="RegistreForm" (ngSubmit)="RegistreMethod()">
+                    <input formControlName="username" type="text" placeholder="Username">
+                    <input formControlName="email" type="email" placeholder="Email">
+                    <input formControlName="password" type="password" placeholder="Password">
+                    <button class="button submit" type="submit">Create Account</button>
+                  </form>
+                </div>
+          
+                <!-- Formulaire de connexion -->
+                <div class="signin" [ngClass]="{'nodisplay': showSignup}">
+                  <h1>Sign In</h1>
+                  <form [formGroup]="loginForm" (ngSubmit)="loginMethod()">
+                    <input formControlName="username" type="text" placeholder="Username">
+                    <input formControlName="password" type="password" placeholder="Password">
+                  
+                    <button class="button submit" type="submit">Login</button>
+                  </form>
+                </div>
+              </div>
+          
+              <!-- Section gauche -->
+              <div class="leftbox">
+                <h2 class="title"><span>MS</span>-XPERT<br><span>CONSTRUCTION</span></h2>
+                <p class="desc">Pick your perfect <span>bouquet</span></p>
+                <img class="flower smaller" src="../../../assets/images/Logo2.png" alt="Bouquet">
+                <p class="account">Have an account?</p>
+                <button class="button" (click)="toggleForms(false)">Login</button>
+              </div>
+          
+              <!-- Section droite -->
+              <div class="rightbox">
+                <h2 class="title"><span>MS</span>-XPERT<br><span>CONSTRUCTION</span></h2>
+                <p class="desc">Pick your perfect <span>bouquet</span></p>
+                <img class="flower" src="../../../assets/images/Logo2.png" alt="Bouquet">
+                <p class="account">Don't have an account?</p>
+                <button class="button" (click)="toggleForms(true)">Sign Up</button>
+              </div>
+            </div>
+          </div>
+    </div>
+</div>
+  

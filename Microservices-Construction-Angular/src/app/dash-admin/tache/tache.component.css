@@ -1,0 +1,19 @@
+.tache{
+    width: 100%;
+}
+.add-tache{
+    width: 100%;
+    background: #000;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 2px solid white;
+}
+
+.show-tache{
+    width: 100%;
+    background: #000;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
